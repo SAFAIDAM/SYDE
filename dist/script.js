@@ -3,9 +3,9 @@ let images = [];
 let time = 3000;
 
 
-images[0] = "/assets/slidemodel.png";
-images[1] = "/assets/slidemodel2.png";
-images[2] = "/assets/slidemodel3.png";
+images[0] = "./assets/slidemodel.png";
+images[1] = "./assets/slidemodel2.png";
+images[2] = "./assets/slidemodel3.png";
 
 var preloadedImages = [];
 for (var j = 0; j < images.length; j++) {
