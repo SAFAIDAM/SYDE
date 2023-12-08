@@ -15,6 +15,35 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <script>
+    let i = 0;
+    let images = [];
+    let time = 3000;
+
+    images[0] = "./assets/slidemodel.png";
+    images[1] = "./assets/slidemodel2.png";
+    images[2] = "./assets/slidemodel3.png";
+
+    var preloadedImages = [];
+    for (var j = 0; j < images.length; j++) {
+      preloadedImages[j] = new Image();
+      preloadedImages[j].src = images[j];
+    }
+
+    function changeImg() {
+      document.slide.src = images[i];
+
+      if (i < images.length - 1) {
+        i++;
+      } else {
+        i = 0;
+      }
+
+      setTimeout(changeImg, time);
+    }
+
+    window.onload = changeImg;
+  </script>
   <body class="overflow-x-hidden bg-black font-[Montserrat]">
     <nav class="mx-auto mb-90 w-[1440px] py-12 px-5">
       <div class="flex justify-between gap-20">
@@ -129,10 +158,10 @@
         </h1>
       </div>
     </div>
-   
+
     <section class="mx-auto mb-90 w-[1440px] py-12 px-5">
       <div class="flex justify-between pt-[50px]">
-        <div> 
+        <div>
           <div class="flex gap-6 pb-9">
             <button class="text-[#FDEDDC] text-[25px]">MANS COLLECTION</button>
             <div class="pt-[13px]">
@@ -151,20 +180,31 @@
             </div>
           </div>
           <div class="">
-            <img class="flex-shrink" src="./assets/card1.png" alt="modelcard">
+            <img class="flex-shrink" src="./assets/card1.png" alt="modelcard" />
             <div class="text-center text-white">
-              <button class="relative top-[-20.5rem] border border-[#FDEDDC] p-5 rounded-md text-[#FDEDDC] hover:bg-[#FDEDDC] hover:text-[#332312] transition-opacity duration-500 hover:opacity-50">SHOP NOW</button>
+              <button
+                class="relative top-[-20.5rem] border border-[#FDEDDC] p-5 rounded-md text-[#FDEDDC] hover:bg-[#FDEDDC] hover:text-[#332312] transition-opacity duration-500 hover:opacity-50"
+              >
+                SHOP NOW
+              </button>
             </div>
-            <h2 class="text-center text-white text-[20px] font-semibold  relative top-[-109px]">Casual STYDE</h2>
+            <h2
+              class="text-center text-white text-[20px] font-semibold relative top-[-109px]"
+            >
+              Casual STYDE
+            </h2>
           </div>
         </div>
         <div>
           <div class="flex gap-6 pb-9">
-            <button class="text-[#FDEDDC] text-[25px] border-x-[#D6B99A] cursor-pointer">
+            <button
+              class="text-[#FDEDDC] text-[25px] border-x-[#D6B99A] cursor-pointer"
+            >
               WOMAN COLLECTION
             </button>
             <div class="pt-[13px]">
-              <svg class=""
+              <svg
+                class=""
                 xmlns="http://www.w3.org/2000/svg"
                 width="57"
                 height="8"
@@ -178,100 +218,172 @@
               </svg>
             </div>
           </div>
-          <div><img class="flex-shirnk" src="./assets/card2.png" alt="modelcard">
-            <div class="text-center  text-white">
-              <button class="relative top-[-20.5rem] border border-[#FDEDDC] p-5 rounded-md text-[#FDEDDC] hover:bg-[#FDEDDC] hover:text-[#332312] transition-opacity duration-500 hover:opacity-50">SHOP NOW</button>
+          <div>
+            <img class="flex-shirnk" src="./assets/card2.png" alt="modelcard" />
+            <div class="text-center text-white">
+              <button
+                class="relative top-[-20.5rem] border border-[#FDEDDC] p-5 rounded-md text-[#FDEDDC] hover:bg-[#FDEDDC] hover:text-[#332312] transition-opacity duration-500 hover:opacity-50"
+              >
+                SHOP NOW
+              </button>
             </div>
-            <h2 class="text-center text-white text-[20px] font-semibold relative top-[-109px]">Casual STYDE</h2>
+            <h2
+              class="text-center text-white text-[20px] font-semibold relative top-[-109px]"
+            >
+              Casual STYDE
+            </h2>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto mb-90 w-[1440px] py-12 px-5" >
-
+    <section class="mx-auto mb-90 w-[1440px] py-12 px-5">
       <div class="pb-[93px]">
-        <h1 class="text-[#FDEDDC] text-[25px] text-center font-normal " >DISCOVER SOMETHING NEW</h1>
+        <h1 class="text-[#FDEDDC] text-[25px] text-center font-normal">
+          DISCOVER SOMETHING NEW
+        </h1>
       </div>
-      <div class="flex justify-between " >
+      <div class="flex justify-between">
         <div>
-          <a href=""><img src="./assets/tishirtmodel.png" alt="tishirtdemo"></a>
-          <h1 class="relative top-[-273px]  right-[-65px] font-bold text-white  text-center text-[40px] w-[258px]">FRESH SHIRTS</h1>
+          <a href=""
+            ><img src="./assets/tishirtmodel.png" alt="tishirtdemo"
+          /></a>
+          <h1
+            class="relative top-[-273px] right-[-65px] font-bold text-white text-center text-[40px] w-[258px]"
+          >
+            FRESH SHIRTS
+          </h1>
         </div>
         <div>
-          <a href=""><img src="./assets/kicks.png" alt="kicksdemo"></a>
-          <h1 class="relative top-[-273px] right-[-65px] font-bold  text-white  text-center text-[40px] w-[258px]">COOL 
-            KICKS</h1>
+          <a href=""><img src="./assets/kicks.png" alt="kicksdemo" /></a>
+          <h1
+            class="relative top-[-273px] right-[-65px] font-bold text-white text-center text-[40px] w-[258px]"
+          >
+            COOL KICKS
+          </h1>
         </div>
         <div>
-          <a href=""><img src="./assets/jaket.png" alt="jaketdemo"></a>
-          <h1 class="relative top-[-273px] right-[-65px] font-bold text-white  text-center text-[40px] w-[258px] ">EVERY DAY
-            JACKET</h1>
+          <a href=""><img src="./assets/jaket.png" alt="jaketdemo" /></a>
+          <h1
+            class="relative top-[-273px] right-[-65px] font-bold text-white text-center text-[40px] w-[258px]"
+          >
+            EVERY DAY JACKET
+          </h1>
         </div>
       </div>
     </section>
     <section class="mx-auto mb-90 w-[1440px] py-12 px-5">
       <div>
         <div>
-          <h1 class="text-[#FDEDDC] text-center text-[28px]">UNLOCK YOUR STYLE POTENTIAL WITH Styde.</h1>
-          <img src="./assets/imgfooter.png" alt="section last logo">
+          <h1 class="text-[#FDEDDC] text-center text-[28px]">
+            UNLOCK YOUR STYLE POTENTIAL WITH Styde.
+          </h1>
+          <img src="./assets/imgfooter.png" alt="section last logo" />
         </div>
       </div>
     </section>
 
-
     <footer class="mx-auto mb-[90px] w-[1440px] py-12 px-5 text-white">
-
-      
       <div class="flex justify-between flex-row">
         <div>
-          <h1 class="pb-9 text-[25px] text-[#FDEDDC]  ">LET US GET IN TOUCH WITH YOU </h1>
-          <input class="p-[20px] bg-transparent border border-3 placeholder:text-[#FDEDDC] rounded-md text-[20px]" type="text" placeholder="YOUR EMAIL" >
-          <button class="relative right-[6rem] text-black text-[20px] bg-[#FDEDDC] p-3 rounded-md">SEND</button>
+          <h1 class="pb-9 text-[25px] text-[#FDEDDC]">
+            LET US GET IN TOUCH WITH YOU
+          </h1>
+          <input
+            class="p-[20px] bg-transparent border border-3 placeholder:text-[#FDEDDC] rounded-md text-[20px]"
+            type="text"
+            placeholder="YOUR EMAIL"
+          />
+          <button
+            class="relative right-[6rem] text-black text-[20px] bg-[#FDEDDC] p-3 rounded-md"
+          >
+            SEND
+          </button>
         </div>
-  
-        <div class="flex justify-between flex-row gap-[362px] text-[25px] text-[#FDEDDC] transition duration-1100 hover:text-[#f9ece0] ">
-          <ul class="pr-[10px] pb-[73px] ">
-            <li class="p-2 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"><a href="">FAQ</a></li>
-            <li class="p-3 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"><a href="">EXCHANGES</a></li>
+
+        <div
+          class="flex justify-between flex-row gap-[362px] text-[25px] text-[#FDEDDC] transition duration-1100 hover:text-[#f9ece0]"
+        >
+          <ul class="pr-[10px] pb-[73px]">
+            <li
+              class="p-2 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+            >
+              <a href="">FAQ</a>
+            </li>
+            <li
+              class="p-3 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+            >
+              <a href="">EXCHANGES</a>
+            </li>
           </ul>
-          <ul class="" >
-            <li class="p-3 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"><a href="">CONTACT US</a></li>
-            <li class="p-3 transform duration-110 hover:scale-110  transition duration-1100 hover:text-[#f9ece0]"><a href="">LOCATIONS</a></li>
-            <li class="p-3 transform duration-110 hover:scale-110  transition duration-1100 hover:text-[#f9ece0]"><a href="">STOCKISTS</a></li>
+          <ul class="">
+            <li
+              class="p-3 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+            >
+              <a href="">CONTACT US</a>
+            </li>
+            <li
+              class="p-3 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+            >
+              <a href="">LOCATIONS</a>
+            </li>
+            <li
+              class="p-3 transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+            >
+              <a href="">STOCKISTS</a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="flex justify-between pt-8 text-[25px] text-[#FDEDDC]">
-        <ul class="flex gap-4 ">
-        <li class="transition duration-1100 hover:text-[#f9ece0]"><a href="https://www.facebook.com" target="_blank"><i
-          class="fa-brands fa-facebook-f transform duration-110 hover:scale-110"
-        ></i
-      ></a></li>
-      <li><a href=" https://www.instagram.com" target="_blank"><i
-        class="fa-brands fa-instagram transform duration-110 hover:scale-110"
-      ></i
-    ></a></li>
-    <li><a href="https://www.twitter.com" target="_blank"><i
-      class="fa-brands fa-x-twitter transform duration-110 hover:scale-110"
-    ></i
-  ></a></li>
+        <ul class="flex gap-4">
+          <li class="transition duration-1100 hover:text-[#f9ece0]">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i
+                class="fa-brands fa-facebook-f transform duration-110 hover:scale-110"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href=" https://www.instagram.com" target="_blank"
+              ><i
+                class="fa-brands fa-instagram transform duration-110 hover:scale-110"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" target="_blank"
+              ><i
+                class="fa-brands fa-x-twitter transform duration-110 hover:scale-110"
+              ></i
+            ></a>
+          </li>
         </ul>
 
-        <div><h3 class=" cursor-pointer transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]">Styde copyright © 2023</h3></div>
-        <div><h3 class="cursor-pointer transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]">TERMS & CONDITIONS</h3></div>
-        <div><h3 class="cursor-pointer transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]">TEAM BUILDERS</h3></div>
-
+        <div>
+          <h3
+            class="cursor-pointer transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+          >
+            Styde copyright © 2023
+          </h3>
+        </div>
+        <div>
+          <h3
+            class="cursor-pointer transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+          >
+            TERMS & CONDITIONS
+          </h3>
+        </div>
+        <div>
+          <h3
+            class="cursor-pointer transform duration-110 hover:scale-110 transition duration-1100 hover:text-[#f9ece0]"
+          >
+            TEAM BUILDERS
+          </h3>
+        </div>
       </div>
-
     </footer>
-    
-      
-   
-  
-
-
 
     <script src="/dist/script.js"></script>
   </body>
